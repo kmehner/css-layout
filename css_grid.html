@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<head>
+    <title>FitLife User Registration</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Displaying the form in the grid */
+        /* display property */
+        /* grid-template-columns */
+        /* By setting the display property to "grid", you are telling the browser to treat 
+        the selected element as a grid container. This means that any direct child elements 
+        of this container will become grid items, which can be positioned and sized within the grid.
+        The grid-template-columns property is used to define the columns of the grid. In your code snippet, 
+        it uses the repeat() function to create two columns with equal width. 
+        The "1fr" value represents a fraction unit, which means that each column will take up an equal portion 
+        of the available space. */
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* the element should span across two grid elements */
+        fieldset {
+            grid-column: span 2;
+            border: none;
+            padding: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+            color: #007bff;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        /* .terms {
+            grid-column: span 2;
+        } */
+
+        button[type="submit"] {
+            grid-column: span 2;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }       
+    </style>
+</head>
+<body>
+  <h1>User Registration</h1>
+
+  <form action="/register" method="post">
+      <!-- <fieldset>: The <fieldset> tag is used to group related form elements together. 
+        It creates a visual grouping effect and is often used to enclose a set of related checkboxes, 
+        radio buttons, or other form elements. 
+        It can also contain a <legend> tag to provide a caption or description for the group.
+
+        <legend>: The <legend> tag is used to provide a caption or description for the content within 
+        the <fieldset> tag. It typically appears as a heading or title for the group of form elements 
+        enclosed by the <fieldset>. In your code snippet, the text "Interests" is specified as the 
+        content of the <legend> tag, so it will be displayed as the caption for the fieldset. -->
+      <fieldset>
+          <legend>Basic Information</legend>
+          
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          
+          <label for="date-of-birth">Date of Birth:</label>
+          <input type="date" id="date-of-birth" name="date-of-birth" required>
+      </fieldset>
+
+      <fieldset>
+          <legend>Gender</legend>
+          
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          
+          <input type="radio" id="female" name="gender" value="female" required>
+          <label for="female">Female</label>
+          
+          <input type="radio" id="other" name="gender" value="other" required>
+          <label for="other">Other</label>
+      </fieldset>
+
+      <fieldset>
+          <legend>Contact Information</legend>
+          
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone">
+          
+          <label for="country">Country:</label>
+          <select id="country" name="country">
+              <option value="usa">United States</option>
+              <option value="canada">Canada</option>
+              <option value="uk">United Kingdom</option>
+              <!-- Add more countries as needed -->
+          </select>
+      </fieldset>
+
+      <fieldset>
+          <legend>Interests</legend>
+          
+          <input type="checkbox" id="running" name="interests" value="running">
+          <label for="running">Running</label>
+          
+          <input type="checkbox" id="yoga" name="interests" value="yoga">
+          <label for="yoga">Yoga</label>
+          
+          <input type="checkbox" id="weightlifting" name="interests" value="weightlifting">
+          <label for="weightlifting">Weightlifting</label>
+          
+          <input type="checkbox" id="swimming" name="interests" value="swimming">
+          <label for="swimming">Swimming</label>
+      </fieldset>
+
+      <fieldset>
+          <legend>Fitness Goals</legend>
+          
+          <label for="fitness-goal">Choose your primary fitness goal:</label>
+          <select id="fitness-goal" name="fitness-goal">
+              <option value="lose-weight">Lose Weight</option>
+              <option value="build-muscle">Build Muscle</option>
+              <option value="improve-endurance">Improve Endurance</option>
+              <option value="maintain-health">Maintain Health</option>
+          </select>
+      </fieldset>
+
+      <fieldset>
+          <legend>Terms and Conditions</legend>
+          
+          <input type="checkbox" id="agree-terms" name="agree-terms" required>
+          <label for="agree-terms">I agree to the <a href="/terms" target="_blank">Terms and Conditions</a></label>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
