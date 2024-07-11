@@ -4,6 +4,129 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Name - Web Resume</title>
+
+    <style>
+      /* Setting the stage of the parent container */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f2f5;
+      }
+
+      /* Center our header with a dark background */
+      header {
+        background-color: #007bff;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Display our nav in BLOCK against darker background */
+      nav {
+        display: block;
+        background: #333;
+        color: #fff;
+        padding: 10px 20px;
+      }
+
+      /* Remove our nav text decoration */
+      nav a {
+        color: #9dafff;
+        text-decoration: none;
+      }
+
+      /* Underline the nav link when we hover over it */
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* Separate the sections out */
+      /* Start with background color, then add margin and padding, then border radius */
+      section,
+      article {
+        padding: 20px;
+        margin: 20px 0;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Collapse table border */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      /* Adjust the look of our table by adding padding and lightening the bottom border */
+      th,
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      /* Make our table header darker */
+      th {
+        background-color: #f7f7f7;
+      }
+
+      /* Feedback when we hover over the row */
+      tr:hover {
+        background-color: #f2f2f2;
+      }
+
+      /* Button styling */
+      button {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Button feedback */
+      button:hover {
+        background-color: #218838;
+      }
+
+      /* Footer styling with relative positioning */
+      /* Relative positioning is relative to its original positioning - making sure it stays there*/
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      /* Fixed remains in the same location even if you scroll */
+      /* Right and top is saying where we want to fix it */
+      aside {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        width: 250px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Styling the testimonials block to stand out */
+      blockquote {
+        font-style: italic;
+        color: #555;
+      }
+
+      img {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+      }
+    </style>
   </head>
 
   <body>
